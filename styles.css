@@ -334,6 +334,19 @@ h3 {
   color: var(--muted);
 }
 
+.history-section {
+  overflow: hidden;
+}
+
+.history-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  margin-top: 0.75rem;
+}
+
 .license-panel {
   display: flex;
   flex-direction: column;
