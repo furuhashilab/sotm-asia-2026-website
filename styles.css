@@ -192,6 +192,16 @@ h1 {
   border-color: var(--accent);
 }
 
+.news-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.news-item + .news-item {
+  border-top: 1px solid #d8d8d8;
+  padding-top: 0.9rem;
+}
+
 .news-kicker {
   margin: 0 0 0.25rem;
   color: var(--accent);
@@ -224,6 +234,10 @@ h1 {
 
 .news-cta:hover {
   background: #a91219;
+}
+
+.is-hidden {
+  display: none !important;
 }
 
 .map-panel {
