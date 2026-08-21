@@ -404,6 +404,130 @@ h3 {
   margin-top: 0.75rem;
 }
 
+.schedule-source {
+  padding: 1rem 1.2rem;
+}
+
+.schedule-source p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+}
+
+.source-links a {
+  border: 1px solid #8a8a8a;
+  border-radius: 999px;
+  color: #3a3a3a;
+  font-weight: 700;
+  padding: 0.42rem 0.72rem;
+  text-decoration: none;
+}
+
+.source-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.schedule-days {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.schedule-day {
+  padding: 1rem;
+}
+
+.schedule-day-head {
+  border-bottom: 1px solid #d0d0d0;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.7rem;
+}
+
+.schedule-day-head h2 {
+  color: var(--accent);
+  font-size: 1.45rem;
+  margin: 0.25rem 0 0;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.schedule-slot {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 0.85rem;
+  border-left: 4px solid #d0d0d0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 0.75rem 0.8rem;
+}
+
+.schedule-slot.featured {
+  border-left-color: var(--accent);
+  background: #fff8f8;
+}
+
+.schedule-slot.parallel {
+  border-left-color: #4a4a4a;
+}
+
+.schedule-slot.break {
+  border-left-color: #ffd700;
+  background: #fffdf0;
+}
+
+.schedule-slot.social {
+  border-left-color: #c8161d;
+  background: #fff8f8;
+}
+
+.schedule-slot time {
+  color: #222222;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.slot-body h3 {
+  color: #2a2a2a;
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+.slot-badge {
+  display: inline-block;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.22rem 0.52rem;
+}
+
+.slot-venue,
+.slot-note {
+  color: var(--muted);
+  margin: 0.15rem 0;
+}
+
+.tour-list {
+  color: #3d3d3d;
+  margin: 0.55rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.tour-list li + li {
+  margin-top: 0.2rem;
+}
+
 .license-panel {
   display: flex;
   flex-direction: column;
@@ -430,7 +554,18 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .schedule-days {
+    grid-template-columns: 1fr;
+  }
+
   #map {
     height: 56vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .schedule-slot {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
   }
 }
