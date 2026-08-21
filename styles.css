@@ -236,6 +236,19 @@ h1 {
   background: #a91219;
 }
 
+.news-link {
+  display: inline-block;
+  margin-top: 0.55rem;
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.news-link:hover {
+  color: #a91219;
+}
+
 .is-hidden {
   display: none !important;
 }
