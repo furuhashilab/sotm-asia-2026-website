@@ -111,6 +111,13 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   color: #3f3f3f;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.brand:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .lang-toggle {
