@@ -37,21 +37,110 @@
       <p class="lead" data-i18n="lead">Announcements and official updates for State of the Map Asia 2026 OSAKA.</p>
     </section>
 
-    <section class="panel intro">
-      <h3 data-i18n="a1">Official Announcements</h3>
-      <p>coming soon...</p>
-      <h3 data-i18n="a2">Call for Proposals</h3>
-      <p>coming soon...</p>
-      <h3 data-i18n="a3">Ticket Information</h3>
-      <p>coming soon...</p>
+    <section class="panel news-archive">
+      <div class="news-list news-page-list">
+        <article class="news-item">
+          <div class="news-meta">
+            <p class="news-kicker" data-i18n="news_kicker_4">News</p>
+            <time datetime="2026-08-21" data-i18n="news_date_4">August 21, 2026</time>
+          </div>
+          <h2 data-i18n="news_title_4">Ticket registration will open soon</h2>
+          <p data-i18n="news_body_4">Thank you for waiting. Conference ticket registration will open very soon!</p>
+        </article>
+        <article class="news-item">
+          <div class="news-meta">
+            <p class="news-kicker" data-i18n="news_kicker_3">News</p>
+            <time datetime="2026-08-21" data-i18n="news_date_3">August 21, 2026</time>
+          </div>
+          <h2 data-i18n="news_title_3">Schedule page updated</h2>
+          <p data-i18n="news_body_3">The Day 1 and Day 2 program schedule is now available.</p>
+          <a class="news-link" href="schedule.html" data-i18n="news_schedule_link">View Schedule</a>
+        </article>
+        <article class="news-item">
+          <div class="news-meta">
+            <p class="news-kicker" data-i18n="news_kicker_2">News</p>
+            <time datetime="2026-08-13" data-i18n="news_date_2">August 13, 2026</time>
+          </div>
+          <h2 data-i18n="news_title_2">Session proposal results have been sent</h2>
+          <p data-i18n="news_body_2">Results were emailed to all Call for Sessions applicants on August 13. Please check your inbox.</p>
+        </article>
+        <article class="news-item">
+          <div class="news-meta">
+            <p class="news-kicker" data-i18n="news_kicker">News</p>
+            <time datetime="2026-08-10" data-i18n="news_date">August 10, 2026</time>
+          </div>
+          <h2 data-i18n="news_title">Call for Sessions closed on August 10</h2>
+          <p data-i18n="news_body">The Call for Sessions for State of the Map Asia 2026 OSAKA closed on August 10.</p>
+        </article>
+      </div>
     </section>
   </main>
 
   <script>
     (function () {
       const dict = {
-        en: { toggle: '日本語', description: 'News for State of the Map Asia 2026 OSAKA', og_description: 'News for State of the Map Asia 2026 OSAKA', menu_home: 'HOME', menu_about: 'About SotM Asia', menu_news: 'News', menu_venue: 'Venue', menu_schedule: 'Schedule', menu_coc: 'Code of Conduct', eyebrow: 'News', title: 'Latest Updates', lead: 'Announcements and official updates for State of the Map Asia 2026 OSAKA.', a1: 'Official Announcements', a2: 'Call for Proposals', a3: 'Ticket Information' },
-        ja: { toggle: 'English', description: 'State of the Map Asia 2026 OSAKA のニュース', og_description: 'State of the Map Asia 2026 OSAKA のニュース', menu_home: 'HOME', menu_about: 'SotM Asia について', menu_news: 'ニュース', menu_venue: '会場', menu_schedule: 'スケジュール', menu_coc: '行動規範', eyebrow: 'ニュース', title: '最新情報', lead: 'State of the Map Asia 2026 OSAKA の公式アナウンスと更新情報です。', a1: '公式アナウンス', a2: '発表募集', a3: 'チケット情報' }
+        en: {
+          toggle: '日本語',
+          description: 'News for State of the Map Asia 2026 OSAKA',
+          og_description: 'News for State of the Map Asia 2026 OSAKA',
+          menu_home: 'HOME',
+          menu_about: 'About SotM Asia',
+          menu_news: 'News',
+          menu_venue: 'Venue',
+          menu_schedule: 'Schedule',
+          menu_coc: 'Code of Conduct',
+          eyebrow: 'News',
+          title: 'Latest Updates',
+          lead: 'Announcements and official updates for State of the Map Asia 2026 OSAKA.',
+          news_kicker: 'News',
+          news_date: 'August 10, 2026',
+          news_title: 'Call for Sessions closed on August 10',
+          news_body: 'The Call for Sessions for State of the Map Asia 2026 OSAKA closed on August 10.',
+          news_kicker_2: 'News',
+          news_date_2: 'August 13, 2026',
+          news_title_2: 'Session proposal results have been sent',
+          news_body_2: 'Results were emailed to all Call for Sessions applicants on August 13. Please check your inbox.',
+          news_kicker_3: 'News',
+          news_date_3: 'August 21, 2026',
+          news_title_3: 'Schedule page updated',
+          news_body_3: 'The Day 1 and Day 2 program schedule is now available.',
+          news_schedule_link: 'View Schedule',
+          news_kicker_4: 'News',
+          news_date_4: 'August 21, 2026',
+          news_title_4: 'Ticket registration will open soon',
+          news_body_4: 'Thank you for waiting. Conference ticket registration will open very soon!'
+        },
+        ja: {
+          toggle: 'English',
+          description: 'State of the Map Asia 2026 OSAKA のニュース',
+          og_description: 'State of the Map Asia 2026 OSAKA のニュース',
+          menu_home: 'HOME',
+          menu_about: 'SotM Asia について',
+          menu_news: 'ニュース',
+          menu_venue: '会場',
+          menu_schedule: 'スケジュール',
+          menu_coc: '行動規範',
+          eyebrow: 'ニュース',
+          title: '最新情報',
+          lead: 'State of the Map Asia 2026 OSAKA の公式アナウンスと更新情報です。',
+          news_kicker: 'ニュース',
+          news_date: '2026年8月10日',
+          news_title: '発表募集 Call for Sessions は8月10日に締め切りました',
+          news_body: 'State of the Map Asia 2026 OSAKA の Call for Sessions は8月10日に締め切りました。',
+          news_kicker_2: 'ニュース',
+          news_date_2: '2026年8月13日',
+          news_title_2: 'Call for Sessions の結果を通知しました',
+          news_body_2: 'Call for Sessions の応募者全員に結果を8月13日にメールで通知しました。申し込まれた方は確認してください。',
+          news_kicker_3: 'ニュース',
+          news_date_3: '2026年8月21日',
+          news_title_3: 'スケジュールページを更新しました',
+          news_body_3: 'Day1 / Day2 のプログラムスケジュールを公開しました。',
+          news_schedule_link: 'スケジュールを見る',
+          news_kicker_4: 'ニュース',
+          news_date_4: '2026年8月21日',
+          news_title_4: 'カンファレンスチケットの申込をまもなく開始します',
+          news_body_4: '大変おまたせしましたが、もうすぐカンファレンスチケットの申し込みを開始します！'
+        }
       };
       const menuToggle = document.getElementById('menu-toggle');
       const siteMenu = document.getElementById('site-menu');
