@@ -10,13 +10,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/SotMAsia2026Osaka_Thumnail.jpg" />
   <link href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/SotMAsia2026Osaka_TakoyakiLogo.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg-glow"></div>
 
   <header class="topbar">
-    <a class="brand" href="index.html" aria-label="Go to home">SotM Asia 2026 Osaka</a>
+    <a class="brand" href="index.html" aria-label="Go to home"><img class="brand-mark" src="assets/SotMAsia2026Osaka_TakoyakiLogo.svg" alt="" /> <span>SotM Asia 2026 Osaka</span></a>
     <div class="top-actions">
       <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">日本語</button>
       <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
@@ -36,12 +37,17 @@
 
   <main class="layout">
     <section class="intro panel">
-      <p class="eyebrow" data-i18n="eyebrow">OpenStreetMap Conference in Asia</p>
-      <h1 data-i18n="hero_title">State of the Map Asia 2026 Osaka</h1>
-      <p class="lead" data-i18n="hero_lead">A regional gathering for mappers, researchers, and open geodata practitioners across Asia.</p>
-      <div class="meta-row">
-        <span data-i18n="hero_date">September 6 (Sun) - 7 (Mon), 2026</span>
-        <span data-i18n="hero_location">Nakazakichō, Kita-ku, Osaka</span>
+      <div class="hero-lockup">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="eyebrow">OpenStreetMap Conference in Asia</p>
+          <h1 data-i18n="hero_title">State of the Map Asia 2026 Osaka</h1>
+          <p class="lead" data-i18n="hero_lead">A regional gathering for mappers, researchers, and open geodata practitioners across Asia.</p>
+          <div class="meta-row">
+            <span data-i18n="hero_date">September 6 (Sun) - 7 (Mon), 2026</span>
+            <span data-i18n="hero_location">Nakazakichō, Kita-ku, Osaka</span>
+          </div>
+        </div>
+        <img class="hero-logo" src="assets/SotMAsia2026Osaka_TakoyakiLogo.svg" alt="State of the Map Asia 2026 OSAKA official logo" />
       </div>
     </section>
 
