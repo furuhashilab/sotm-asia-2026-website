@@ -9,6 +9,7 @@
   <meta property="og:description" content="Venue information for State of the Map Asia 2026 OSAKA" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/SotMAsia2026Osaka_Thumnail.jpg" />
+  <link href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="assets/SotMAsia2026Osaka_TakoyakiLogo.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -37,31 +38,335 @@
       <p class="lead"><a href="https://omaps.app/_3gIz5dyPt/Nakazakich%C5%8D%20Hall" target="_blank" rel="noopener noreferrer">Nakazakichō Hall</a> / <a href="https://omaps.app/83gIz5fMDs/Salon_de_AmanTo" target="_blank" rel="noopener noreferrer">Salon de AManTo 天人</a> (Osaka)</p>
     </section>
 
+    <section class="panel venue-showcase">
+      <div class="venue-showcase-head">
+        <p class="eyebrow" data-i18n="venue_showcase_eyebrow">Venue Materials</p>
+        <h2 data-i18n="venue_showcase_title">Meet the neighborhood venues</h2>
+        <p data-i18n="venue_showcase_lead">The conference is rooted in Nakazakichō, a walkable neighborhood with community spaces, small cafes, and a warm local atmosphere.</p>
+      </div>
+      <div class="venue-card-grid">
+        <article class="venue-card">
+          <img src="assets/NAKAZAKICHO_hall.png" alt="Illustration of Nakazakichō Hall" loading="lazy" />
+          <div>
+            <h3 data-i18n="venue_hall_title">Nakazakichō Hall</h3>
+            <p data-i18n="venue_hall_body">A community-rooted multi-purpose hall that will serve as the main venue for sessions and gatherings.</p>
+            <div class="venue-nav-links" aria-label="Navigation links for Nakazakichō Hall">
+              <a href="https://omaps.app/_3gIz5dyPt/Nakazakich%C5%8D%20Hall" target="_blank" rel="noopener noreferrer" data-i18n="nav_organic">Organic Maps</a>
+              <a href="https://maps.app.goo.gl/GjSNGM796iYbLt8U9" target="_blank" rel="noopener noreferrer" data-i18n="nav_google">Google Maps</a>
+            </div>
+          </div>
+        </article>
+        <article class="venue-card">
+          <img src="assets/AManTO_cafe.png" alt="Illustration of Salon de AManTo 天人" loading="lazy" />
+          <div>
+            <h3 data-i18n="venue_amanto_title">Salon de AManTo 天人</h3>
+            <p data-i18n="venue_amanto_body">A beloved local cultural cafe and community space that helps shape the unique atmosphere of Nakazakichō.</p>
+            <div class="venue-nav-links" aria-label="Navigation links for AManTo Cafe">
+              <a href="https://omaps.app/_3gIz5fMDs/AManToCafe" target="_blank" rel="noopener noreferrer" data-i18n="nav_organic">Organic Maps</a>
+              <a href="https://maps.app.goo.gl/cKefJTbc8ofqSVL8A" target="_blank" rel="noopener noreferrer" data-i18n="nav_google">Google Maps</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="map-panel panel venue-map-panel">
+      <div class="map-head">
+        <div class="map-head-row">
+          <h2 data-i18n="venue_map_title">Road to the Venue</h2>
+          <div class="story-controls">
+            <button id="venue-story-pause" class="story-btn" type="button">Pause</button>
+            <button id="venue-story-play" class="story-btn" type="button">Play</button>
+          </div>
+        </div>
+      </div>
+      <div id="venue-map" aria-label="Map showing Osaka Station and Nakazakichō Hall"></div>
+      <div class="poi-bar" id="venue-poi-bar" aria-live="polite"></div>
+    </section>
+
     <section class="panel intro">
       <h3 data-i18n="a1">Access Guide</h3>
-      <p>coming soon...</p>
+      <ul class="venue-info-list">
+        <li data-i18n="access_osaka">About 15 minutes on foot from JR Osaka Station Midosuji Gate, Hankyu Osaka-Umeda Station, or Osaka Metro Umeda Station.</li>
+        <li data-i18n="access_nakazakicho">About 3 minutes on foot from Nakazakichō Station on the Osaka Metro Tanimachi Line.</li>
+      </ul>
       <h3 data-i18n="a2">Accessibility Information</h3>
-      <p>coming soon...</p>
+      <ul class="venue-info-list">
+        <li data-i18n="accessibility_venues">Both Nakazakichō Hall and AManTo Cafe are wheelchair accessible.</li>
+        <li data-i18n="accessibility_nakazakicho">Nakazakichō Station on the Osaka Metro Tanimachi Line is wheelchair accessible.</li>
+        <li data-i18n="accessibility_osaka">Osaka Station and Umeda Station are partially wheelchair accessible, but please note that accessible routes may require a considerable detour.</li>
+      </ul>
       <h3 data-i18n="a3">Nearby Accommodation</h3>
-      <p>coming soon...</p>
+      <p class="venue-info-note" data-i18n="accommodation_body">Nakazakichō Station on the Osaka Metro Tanimachi Line is the closest station, so staying along that line is especially convenient. Other central Osaka areas are also easy to access from, including locations within the JR Osaka Loop Line area and around Shin-Osaka Station.</p>
     </section>
   </main>
 
+  <script src="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
   <script>
     (function () {
       const dict = {
-        en: { toggle: '日本語', description: 'Venue information for State of the Map Asia 2026 OSAKA', og_description: 'Venue information for State of the Map Asia 2026 OSAKA', menu_home: 'HOME', menu_about: 'About SotM Asia', menu_news: 'News', menu_venue: 'Venue', menu_schedule: 'Schedule', menu_coc: 'Code of Conduct', eyebrow: 'Venue', title: 'Nakazakichō Hall & Salon de AManTo 天人', a1: 'Access Guide', a2: 'Accessibility Information', a3: 'Nearby Accommodation' },
-        ja: { toggle: 'English', description: 'State of the Map Asia 2026 OSAKA の会場情報', og_description: 'State of the Map Asia 2026 OSAKA の会場情報', menu_home: 'HOME', menu_about: 'SotM Asia について', menu_news: 'ニュース', menu_venue: '会場', menu_schedule: 'スケジュール', menu_coc: '行動規範', eyebrow: '会場', title: '中崎町ホール & Salon de AManTo 天人', a1: 'アクセス案内', a2: 'アクセシビリティ情報', a3: '周辺宿泊情報' }
+        en: {
+          toggle: '日本語',
+          description: 'Venue information for State of the Map Asia 2026 OSAKA',
+          og_description: 'Venue information for State of the Map Asia 2026 OSAKA',
+          menu_home: 'HOME',
+          menu_about: 'About SotM Asia',
+          menu_news: 'News',
+          menu_venue: 'Venue',
+          menu_schedule: 'Schedule',
+          menu_coc: 'Code of Conduct',
+          eyebrow: 'Venue',
+          title: 'Nakazakichō Hall & Salon de AManTo 天人',
+          venue_showcase_eyebrow: 'Venue Materials',
+          venue_showcase_title: 'Meet the neighborhood venues',
+          venue_showcase_lead: 'The conference is rooted in Nakazakichō, a walkable neighborhood with community spaces, small cafes, and a warm local atmosphere.',
+          venue_hall_title: 'Nakazakichō Hall',
+          venue_hall_body: 'A community-rooted multi-purpose hall that will serve as the main venue for sessions and gatherings.',
+          venue_amanto_title: 'Salon de AManTo 天人',
+          venue_amanto_body: 'A beloved local cultural cafe and community space that helps shape the unique atmosphere of Nakazakichō.',
+          venue_map_title: 'Road to the Venue',
+          nav_organic: 'Organic Maps',
+          nav_google: 'Google Maps',
+          pause_label: 'Pause',
+          play_label: 'Play',
+          poi_osaka: 'Osaka Station',
+          poi_hall: 'Nakazakichō Hall',
+          poi_amanto: 'AManTo Cafe',
+          a1: 'Access Guide',
+          a2: 'Accessibility Information',
+          a3: 'Nearby Accommodation',
+          access_osaka: 'About 15 minutes on foot from JR Osaka Station Midosuji Gate, Hankyu Osaka-Umeda Station, or Osaka Metro Umeda Station.',
+          access_nakazakicho: 'About 3 minutes on foot from Nakazakichō Station on the Osaka Metro Tanimachi Line.',
+          accessibility_venues: 'Both Nakazakichō Hall and AManTo Cafe are wheelchair accessible.',
+          accessibility_nakazakicho: 'Nakazakichō Station on the Osaka Metro Tanimachi Line is wheelchair accessible.',
+          accessibility_osaka: 'Osaka Station and Umeda Station are partially wheelchair accessible, but please note that accessible routes may require a considerable detour.',
+          accommodation_body: 'Nakazakichō Station on the Osaka Metro Tanimachi Line is the closest station, so staying along that line is especially convenient. Other central Osaka areas are also easy to access from, including locations within the JR Osaka Loop Line area and around Shin-Osaka Station.'
+        },
+        ja: {
+          toggle: 'English',
+          description: 'State of the Map Asia 2026 OSAKA の会場情報',
+          og_description: 'State of the Map Asia 2026 OSAKA の会場情報',
+          menu_home: 'HOME',
+          menu_about: 'SotM Asia について',
+          menu_news: 'ニュース',
+          menu_venue: '会場',
+          menu_schedule: 'スケジュール',
+          menu_coc: '行動規範',
+          eyebrow: '会場',
+          title: '中崎町ホール & Salon de AManTo 天人',
+          venue_showcase_eyebrow: '会場資料',
+          venue_showcase_title: '中崎町の会場を紹介します',
+          venue_showcase_lead: 'カンファレンスは、地域のコミュニティスペースや小さなカフェが点在する、歩いて楽しい中崎町を舞台に開催します。',
+          venue_hall_title: '中崎町ホール',
+          venue_hall_body: 'セッションや交流の中心会場となる、地域に根ざした多目的ホールです。',
+          venue_amanto_title: 'Salon de AManTo 天人',
+          venue_amanto_body: '中崎町らしい空気をつくる、地域に親しまれている文化カフェ・コミュニティスペースです。',
+          venue_map_title: '会場への道',
+          nav_organic: 'Organic Mapsで開く',
+          nav_google: 'Google Mapsで開く',
+          pause_label: '一時停止',
+          play_label: '再生',
+          poi_osaka: '大阪駅',
+          poi_hall: '中崎町ホール',
+          poi_amanto: 'AManTo Cafe',
+          a1: 'アクセス案内',
+          a2: 'アクセシビリティ情報',
+          a3: '周辺宿泊情報',
+          access_osaka: 'JR大阪駅 御堂筋口 / 阪急大阪梅田駅 / 地下鉄梅田駅 から徒歩約15分',
+          access_nakazakicho: '地下鉄谷町線 中崎町駅から徒歩約3分',
+          accessibility_venues: 'Nakazakichō Hall も AManTo Cafe も車椅子でアクセス可能です。',
+          accessibility_nakazakicho: '地下鉄谷町線 中崎町駅も車椅子でアクセス可能です。',
+          accessibility_osaka: '大阪駅・梅田駅は一部車椅子でアクセス可能ですが、かなり遠回りしないといけないため注意が必要です。',
+          accommodation_body: '地下鉄谷町線 中崎町駅が、最も近い最寄り駅ですので、その沿線沿いが特に便利です。それ以外にもJR大阪環状線圏内や新大阪駅周辺など、大阪の中心部であればどこからでもアクセスしやすいです。'
+        }
       };
+      const venuePois = [
+        {
+          id: 'poi_osaka',
+          center: [135.4983, 34.7025],
+          zoom: 15.6,
+          pitch: 40,
+          bearing: 220
+        },
+        {
+          id: 'poi_hall',
+          center: [135.504760, 34.707587],
+          zoom: 17.8,
+          pitch: 20,
+          bearing: 45
+        },
+        {
+          id: 'poi_amanto',
+          center: [135.504393646796, 34.708068733628544],
+          zoom: 18.0,
+          pitch: 20,
+          bearing: 45
+        }
+      ];
       const menuToggle = document.getElementById('menu-toggle');
       const siteMenu = document.getElementById('site-menu');
       const langToggle = document.getElementById('lang-toggle');
       const metaDescription = document.querySelector('meta[name="description"]');
       const ogDescription = document.querySelector('meta[property="og:description"]');
-      function applyLang(lang) { const t = dict[lang] || dict.en; document.documentElement.lang = lang; langToggle.textContent = t.toggle; if (metaDescription) metaDescription.setAttribute('content', t.description); if (ogDescription) ogDescription.setAttribute('content', t.og_description); document.querySelectorAll('[data-i18n]').forEach(function (el) { const key = el.getAttribute('data-i18n'); if (t[key]) el.textContent = t[key]; }); localStorage.setItem('preferredLanguage', lang); }
-      let currentLang = localStorage.getItem('preferredLanguage') === 'ja' ? 'ja' : 'en'; applyLang(currentLang);
+      const venuePoiBar = document.getElementById('venue-poi-bar');
+      const pauseBtn = document.getElementById('venue-story-pause');
+      const playBtn = document.getElementById('venue-story-play');
+      const FLY_DURATION_MS = 8000;
+      const HOLD_DURATION_MS = 3000;
+      let currentLang = localStorage.getItem('preferredLanguage') === 'ja' ? 'ja' : 'en';
+      let currentVenuePoiIndex = 0;
+      let isPaused = false;
+      let timer = null;
+
+      function renderVenuePoiBar() {
+        const t = dict[currentLang] || dict.en;
+        venuePoiBar.innerHTML = venuePois.map(function (poi, idx) {
+          const active = idx === currentVenuePoiIndex ? 'active' : '';
+          return '<button class="poi-chip ' + active + '" data-venue-poi="' + idx + '">' + t[poi.id] + '</button>';
+        }).join('');
+        venuePoiBar.querySelectorAll('.poi-chip').forEach(function (chip) {
+          chip.addEventListener('click', function () {
+            const idx = Number(chip.getAttribute('data-venue-poi'));
+            flyToVenuePoi(idx);
+            if (!isPaused) restartVenueAutoPlay();
+          });
+        });
+      }
+
+      function applyLang(lang) {
+        const t = dict[lang] || dict.en;
+        document.documentElement.lang = lang;
+        langToggle.textContent = t.toggle;
+        if (metaDescription) metaDescription.setAttribute('content', t.description);
+        if (ogDescription) ogDescription.setAttribute('content', t.og_description);
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          const key = el.getAttribute('data-i18n');
+          if (t[key]) el.textContent = t[key];
+        });
+        pauseBtn.textContent = t.pause_label;
+        playBtn.textContent = t.play_label;
+        renderVenuePoiBar();
+        localStorage.setItem('preferredLanguage', lang);
+      }
+
+      applyLang(currentLang);
       langToggle.addEventListener('click', function () { currentLang = currentLang === 'en' ? 'ja' : 'en'; applyLang(currentLang); });
       menuToggle.addEventListener('click', function () { const open = siteMenu.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false'); siteMenu.setAttribute('aria-hidden', open ? 'false' : 'true'); });
+
+      const venueMap = new maplibregl.Map({
+        container: 'venue-map',
+        style: 'https://tiles.openfreemap.org/styles/liberty',
+        center: venuePois[0].center,
+        zoom: venuePois[0].zoom,
+        pitch: venuePois[0].pitch,
+        bearing: venuePois[0].bearing,
+        bearingSnap: 0,
+        antialias: true
+      });
+
+      venueMap.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
+
+      venueMap.on('load', function () {
+        venueMap.addSource('mapterhorn-dem', {
+          type: 'raster-dem',
+          url: 'https://tiles.mapterhorn.com/tilejson.json'
+        });
+        venueMap.setTerrain({ source: 'mapterhorn-dem', exaggeration: 1.25 });
+
+        const style = venueMap.getStyle();
+        const has3dBuildings = style.layers.some(function (layer) {
+          return layer.type === 'fill-extrusion';
+        });
+
+        if (!has3dBuildings) {
+          const vectorSourceId = Object.keys(style.sources).find(function (id) {
+            return style.sources[id] && style.sources[id].type === 'vector';
+          });
+
+          if (vectorSourceId) {
+            venueMap.addLayer({
+              id: 'venue-3d-buildings-fallback',
+              source: vectorSourceId,
+              'source-layer': 'building',
+              type: 'fill-extrusion',
+              minzoom: 14,
+              paint: {
+                'fill-extrusion-color': '#d7b97c',
+                'fill-extrusion-height': ['coalesce', ['get', 'render_height'], ['get', 'height'], 8],
+                'fill-extrusion-base': ['coalesce', ['get', 'render_min_height'], ['get', 'min_height'], 0],
+                'fill-extrusion-opacity': 0.75
+              }
+            });
+          }
+        }
+
+        venuePois.forEach(function (poi) {
+          let markerOptions = { color: '#4A4A4A' };
+          if (poi.id === 'poi_hall') markerOptions = { color: '#e53935', scale: 1.5 };
+          if (poi.id === 'poi_amanto') markerOptions = { color: '#E5832C', scale: 1.2 };
+          new maplibregl.Marker(markerOptions).setLngLat(poi.center).addTo(venueMap);
+        });
+
+        flyToVenuePoi(0);
+        restartVenueAutoPlay();
+        updateStoryButtons();
+      });
+
+      function flyToVenuePoi(idx) {
+        if (!venueMap || !venueMap.isStyleLoaded()) return;
+        currentVenuePoiIndex = idx % venuePois.length;
+        const poi = venuePois[currentVenuePoiIndex];
+        venueMap.stop();
+        venueMap.easeTo({
+          center: poi.center,
+          zoom: poi.zoom,
+          pitch: poi.pitch,
+          bearing: poi.bearing,
+          duration: FLY_DURATION_MS,
+          easing: function (t) { return t * (2 - t); },
+          essential: true
+        });
+        renderVenuePoiBar();
+      }
+
+      function scheduleNextScene() {
+        if (isPaused) return;
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(function () {
+          flyToVenuePoi((currentVenuePoiIndex + 1) % venuePois.length);
+          scheduleNextScene();
+        }, FLY_DURATION_MS + HOLD_DURATION_MS);
+      }
+
+      function restartVenueAutoPlay() {
+        scheduleNextScene();
+      }
+
+      function updateStoryButtons() {
+        if (isPaused) {
+          pauseBtn.classList.add('active');
+          playBtn.classList.remove('active');
+        } else {
+          playBtn.classList.add('active');
+          pauseBtn.classList.remove('active');
+        }
+      }
+
+      pauseBtn.addEventListener('click', function () {
+        isPaused = true;
+        if (timer) {
+          clearTimeout(timer);
+          timer = null;
+        }
+        updateStoryButtons();
+      });
+
+      playBtn.addEventListener('click', function () {
+        if (!isPaused) return;
+        isPaused = false;
+        restartVenueAutoPlay();
+        updateStoryButtons();
+      });
     })();
   </script>
 </body>
