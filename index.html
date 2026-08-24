@@ -10,13 +10,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/SotMAsia2026Osaka_Thumnail.jpg" />
   <link href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/SotMAsia2026Osaka_TakoyakiLogo.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg-glow"></div>
 
   <header class="topbar">
-    <a class="brand" href="index.html" aria-label="Go to home">SotM Asia 2026 Osaka</a>
+    <a class="brand" href="index.html" aria-label="Go to home"><img class="brand-mark" src="assets/SotMAsia2026Osaka_TakoyakiLogo.svg" alt="" /> <span>SotM Asia 2026 Osaka</span></a>
     <div class="top-actions">
       <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">日本語</button>
       <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
@@ -36,17 +37,34 @@
 
   <main class="layout">
     <section class="intro panel">
-      <p class="eyebrow" data-i18n="eyebrow">OpenStreetMap Conference in Asia</p>
-      <h1 data-i18n="hero_title">State of the Map Asia 2026 Osaka</h1>
-      <p class="lead" data-i18n="hero_lead">A regional gathering for mappers, researchers, and open geodata practitioners across Asia.</p>
-      <div class="meta-row">
-        <span data-i18n="hero_date">September 6 (Sun) - 7 (Mon), 2026</span>
-        <span data-i18n="hero_location">Nakazakichō, Kita-ku, Osaka</span>
+      <div class="hero-lockup">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="eyebrow">OpenStreetMap Conference in Asia</p>
+          <h1 data-i18n="hero_title">State of the Map Asia 2026 Osaka</h1>
+          <p class="lead" data-i18n="hero_lead">A regional gathering for mappers, researchers, and open geodata practitioners across Asia.</p>
+          <div class="meta-row">
+            <span data-i18n="hero_date">September 6 (Sun) - 7 (Mon), 2026</span>
+            <span data-i18n="hero_location">Nakazakichō, Kita-ku, Osaka</span>
+          </div>
+          <div class="hero-actions">
+            <a class="registration-cta" href="https://sotmasia2026osaka.peatix.com/" target="_blank" rel="noopener noreferrer" data-i18n="registration_cta">Registration</a>
+          </div>
+        </div>
+        <img class="hero-logo" src="assets/SotMAsia2026Osaka_TakoyakiLogo.svg" alt="State of the Map Asia 2026 OSAKA official logo" />
       </div>
     </section>
 
     <section class="news-alert panel">
       <div class="news-list">
+        <article class="news-item">
+          <div class="news-meta">
+            <p class="news-kicker" data-i18n="news_kicker_5">News</p>
+            <time datetime="2026-08-24" data-i18n="news_date_5">August 24, 2026</time>
+          </div>
+          <h2 data-i18n="news_title_5">Registration is now open</h2>
+          <p data-i18n="news_body_5">Participant registration for State of the Map Asia 2026 OSAKA is now open.</p>
+          <a class="news-link" href="https://sotmasia2026osaka.peatix.com/" target="_blank" rel="noopener noreferrer" data-i18n="news_registration_link">Register now</a>
+        </article>
         <article class="news-item">
           <div class="news-meta">
             <p class="news-kicker" data-i18n="news_kicker_4">News</p>
@@ -82,6 +100,7 @@
         </article>
       </div>
       <a class="news-cta is-hidden" href="https://forms.gle/gbJH8WEcN8nkHTJQ9" target="_blank" rel="noopener noreferrer" data-i18n="news_cta">View Form</a>
+      <a class="news-archive-link" href="news.html" data-i18n="news_archive_link">View all news</a>
     </section>
 
     <section class="map-panel panel">
@@ -134,10 +153,16 @@
           hero_lead: 'A regional gathering for mappers, researchers, and open geodata practitioners across Asia.',
           hero_date: 'September 6 (Sun) - 7 (Mon), 2026',
           hero_location: 'Nakazakichō, Kita-ku, Osaka',
+          registration_cta: 'Registration',
           map_title: 'Road to SotM Asia 2026 OSAKA',
           map_subtitle: 'See you soon at Nakazakichō, OSAKA!',
           pause_label: 'Pause',
           play_label: 'Play',
+          news_kicker_5: 'News',
+          news_date_5: 'August 24, 2026',
+          news_title_5: 'Registration is now open',
+          news_body_5: 'Participant registration for State of the Map Asia 2026 OSAKA is now open.',
+          news_registration_link: 'Register now',
           news_kicker: 'News',
           news_date: 'August 10, 2026',
           news_title: 'Call for Sessions closed on August 10',
@@ -155,6 +180,7 @@
           news_date_4: 'August 21, 2026',
           news_title_4: 'Ticket registration will open soon',
           news_body_4: 'Thank you for waiting. Conference ticket registration will open very soon!',
+          news_archive_link: 'View all news',
           news_cta: 'View Form',
           overview_title: 'Overview',
           overview_body: 'State of the Map Asia brings together communities to share practical mapping knowledge, humanitarian workflows, and open geospatial ideas.',
@@ -187,10 +213,16 @@
           hero_lead: 'アジア各地のマッパー、研究者、オープン地理データ実践者が集まる地域カンファレンスです。',
           hero_date: '2026年9月6日(日) - 9月7日(月)',
           hero_location: '大阪市北区 中崎町',
+          registration_cta: '参加登録',
           map_title: 'SotM Asia 2026 OSAKA への道',
           map_subtitle: '中崎町で会いましょう！',
           pause_label: '一時停止',
           play_label: '再生',
+          news_kicker_5: 'ニュース',
+          news_date_5: '2026年8月24日',
+          news_title_5: '参加者受付を開始しました',
+          news_body_5: 'State of the Map Asia 2026 OSAKA の参加者受付を開始しました。',
+          news_registration_link: '参加登録する',
           news_kicker: 'ニュース',
           news_date: '2026年8月10日',
           news_title: '発表募集 Call for Sessions は8月10日に締め切りました',
@@ -208,6 +240,7 @@
           news_date_4: '2026年8月21日',
           news_title_4: 'カンファレンスチケットの申込をまもなく開始します',
           news_body_4: '大変おまたせしましたが、もうすぐカンファレンスチケットの申し込みを開始します！',
+          news_archive_link: 'すべてのニュースを見る',
           news_cta: '応募フォームを見る',
           overview_title: 'イベント概要',
           overview_body: 'State of the Map Asia は、実践的なマッピング知識、人道支援ワークフロー、オープン地理情報の活用を共有する場です。',

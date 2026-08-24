@@ -4,7 +4,7 @@
   --line: #4a4a4a;
   --text: #2a2a2a;
   --muted: #5f5f5f;
-  --accent: #c8161d;
+  --accent: #E5832C;
   --accent-2: #ffd700;
   --panel: rgba(255, 255, 255, 0.92);
 }
@@ -101,11 +101,14 @@ body {
 }
 
 .site-menu a.active {
-  background: #c8161d;
+  background: #E5832C;
   color: #fff;
 }
 
 .brand {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.55rem;
   font-size: 0.95rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -113,6 +116,11 @@ body {
   color: #3f3f3f;
   text-decoration: none;
   cursor: pointer;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
 }
 
 .brand:focus-visible {
@@ -163,6 +171,23 @@ body {
   color: var(--accent);
 }
 
+.hero-lockup {
+  align-items: center;
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 260px);
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 260px;
+  justify-self: end;
+}
+
 h1 {
   margin: 0.5rem 0 0.8rem;
   font-size: clamp(2rem, 5.4vw, 4.5rem);
@@ -188,6 +213,36 @@ h1 {
   padding: 0.35rem 0.75rem;
   font-size: 0.9rem;
   color: #3b3b3b;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+.registration-cta {
+  align-items: center;
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-weight: 900;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  min-width: 190px;
+  padding: 0.78rem 1.45rem;
+  text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.registration-cta:hover {
+  background: #9b5a20;
+  border-color: #9b5a20;
+  color: #ffffff;
 }
 
 .news-alert {
@@ -254,7 +309,20 @@ h1 {
 }
 
 .news-cta:hover {
-  background: #a91219;
+  background: #E5832C;
+}
+
+.news-archive-link {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  white-space: nowrap;
+}
+
+.news-archive-link:hover {
+  color: #9b5a20;
 }
 
 .news-link {
@@ -267,7 +335,31 @@ h1 {
 }
 
 .news-link:hover {
-  color: #a91219;
+  color: #E5832C;
+}
+
+.news-archive {
+  padding: 1.2rem;
+}
+
+.news-page-list {
+  gap: 1.15rem;
+}
+
+.news-page-list .news-item + .news-item {
+  padding-top: 1.15rem;
+}
+
+.news-page-list h2 {
+  margin: 0 0 0.3rem;
+  color: var(--accent);
+  font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+}
+
+.news-page-list p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .is-hidden {
@@ -318,13 +410,27 @@ h1 {
 }
 
 .story-btn.active {
-  background: linear-gradient(135deg, #c8161d, #a91219);
-  border-color: #c8161d;
+  background: linear-gradient(135deg, #E5832C, #E5832C);
+  border-color: #E5832C;
   color: #ffffff;
-  box-shadow: 0 0 0 2px rgba(200, 22, 29, 0.2);
+  box-shadow: 0 0 0 2px rgba(229, 131, 44, 0.2);
 }
 
 @media (max-width: 720px) {
+  .hero-lockup {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-logo {
+    justify-self: start;
+    max-width: 180px;
+  }
+
+  .registration-cta {
+    min-width: 0;
+    width: 100%;
+  }
+
   .map-head-row {
     flex-wrap: wrap;
   }
@@ -360,8 +466,8 @@ h1 {
 }
 
 .poi-chip.active {
-  background: linear-gradient(135deg, #c8161d, #a91219);
-  border-color: #c8161d;
+  background: linear-gradient(135deg, #E5832C, #E5832C);
+  border-color: #E5832C;
   color: #fff;
 }
 
@@ -440,7 +546,7 @@ h3 {
 
 .coc-hero {
   background:
-    linear-gradient(135deg, rgba(200, 22, 29, 0.08), rgba(255, 255, 255, 0) 58%),
+    linear-gradient(135deg, rgba(229, 131, 44, 0.08), rgba(255, 255, 255, 0) 58%),
     #ffffff;
 }
 
@@ -452,9 +558,9 @@ h3 {
 }
 
 .coc-aside {
-  border: 1px solid rgba(200, 22, 29, 0.25);
+  border: 1px solid rgba(229, 131, 44, 0.25);
   border-radius: 14px;
-  background: #fff8f8;
+  background: #fff7ef;
   padding: 1rem;
   align-self: start;
   position: sticky;
@@ -601,7 +707,7 @@ h3 {
 
 .schedule-slot.featured {
   border-left-color: var(--accent);
-  background: #fff8f8;
+  background: #fff7ef;
 }
 
 .schedule-slot.parallel {
@@ -614,8 +720,8 @@ h3 {
 }
 
 .schedule-slot.social {
-  border-left-color: #c8161d;
-  background: #fff8f8;
+  border-left-color: #E5832C;
+  background: #fff7ef;
 }
 
 .schedule-slot time {
