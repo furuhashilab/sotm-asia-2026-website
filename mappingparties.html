@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapping Parties | State of the Map Asia 2026 OSAKA</title>
+  <meta name="description" content="OSAKA Mapping Parties for State of the Map Asia 2026 OSAKA" />
+  <meta property="og:title" content="Mapping Parties | State of the Map Asia 2026 OSAKA" />
+  <meta property="og:description" content="OSAKA Mapping Parties for State of the Map Asia 2026 OSAKA" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/SotMAsia2026Osaka_Thumnail.jpg" />
+  <link rel="icon" type="image/svg+xml" href="assets/SotMAsia2026Osaka_TakoyakiLogo.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Go to home"><img class="brand-mark" src="assets/SotMAsia2026Osaka_TakoyakiLogo.svg" alt="" /> <span>SotM Asia 2026 Osaka</span></a>
+    <div class="top-actions">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">日本語</button>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav id="site-menu" class="site-menu" aria-hidden="true">
+    <a href="index.html" data-i18n="menu_home">HOME</a>
+    <a href="about.html" data-i18n="menu_about">About SotM Asia</a>
+    <a href="news.html" data-i18n="menu_news">News</a>
+    <a href="venue.html" data-i18n="menu_venue">Venue</a>
+    <a href="schedule.html" data-i18n="menu_schedule">Schedule</a>
+    <a href="mappingparties.html" class="active" data-i18n="menu_mapping">Mapping Parties</a>
+    <a href="coc.html" data-i18n="menu_coc">Code of Conduct</a>
+  </nav>
+
+  <main class="layout">
+    <section class="panel intro mapping-hero">
+      <p class="eyebrow" data-i18n="eyebrow">Mapping Parties</p>
+      <h1 data-i18n="title">OSAKA Mapping Parties</h1>
+      <p class="lead" data-i18n="lead">Walk the city, observe local details, and update OpenStreetMap together.</p>
+    </section>
+
+    <section class="panel mapping-image-panel">
+      <img
+        class="mapping-image"
+        src="assets/MappingParties_image_minimal.png"
+        alt="Illustration of participants joining a mapping party in Osaka"
+        loading="lazy"
+      />
+    </section>
+
+    <section class="panel mapping-copy-panel">
+      <article class="mapping-copy">
+        <p data-i18n="intro_body">At State of the Map Asia 2026 OSAKA, we will not only discuss open map data. We will also host Mapping Parties, a traditional OpenStreetMap community field-mapping event where participants walk through the city and create maps themselves.</p>
+
+        <h2 data-i18n="what_title">What Is a Mapping Party?</h2>
+        <p data-i18n-html="what_body_1"><a href="https://wiki.openstreetmap.org/wiki/Mapping_parties" target="_blank" rel="noopener noreferrer">Mapping Parties</a> are participatory community events where people visit a place and update OpenStreetMap (OSM) data through fieldwork. Compared with <a href="https://wiki.openstreetmap.org/wiki/Mapathon" target="_blank" rel="noopener noreferrer">Mapathons</a>, which are held online without visiting the site, mapping parties tend to collect fresher, more local information. Mapping may sound technical or difficult, but no specialist knowledge is required. Even first-time OSM users and people who have never edited a map can join and enjoy the experience.</p>
+        <p data-i18n="what_body_2">One of the biggest strengths of this event is that it welcomes beginners and new participants. Experienced mappers and specialists will also be there, but people who are just starting to explore OSM are equally important participants. Because you can learn how to use the tools and how to collect data from the ground up, the event also works as a hands-on training opportunity for getting to know OSM.</p>
+        <p data-i18n-html="what_body_3">At a mapping party, participants typically form teams and walk around the city together to collect information. They may use paper maps such as <a href="https://fieldpapers.org/" target="_blank" rel="noopener noreferrer">Field Papers</a> to note what they notice, or record streetscapes, buildings, landmarks, and other details with smartphones or digital cameras. Instead of working only at a desk, participants observe the character of the neighborhood while walking, rediscovering local charm with the feeling of a stroll or a treasure hunt.</p>
+        <p data-i18n-html="what_body_4">Since OpenStreetMap was born in 2004, <a href="https://osmcal.org/" target="_blank" rel="noopener noreferrer">many different mapping parties have been held around the world</a>.</p>
+
+        <div class="mapping-resources">
+          <h2 data-i18n="more_title">Read More</h2>
+          <p data-i18n="more_body">If you would like to learn more, please also read these resources.</p>
+          <ul class="resource-list">
+            <li><span data-i18n="resource_osm_label">What is OpenStreetMap?</span> <a href="https://wiki.openstreetmap.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer">OpenStreetMap Wiki</a></li>
+            <li><span data-i18n="resource_party_label">What is a mapping party?</span> <a href="https://wiki.openstreetmap.org/wiki/Mapping_parties" target="_blank" rel="noopener noreferrer">Mapping parties - OpenStreetMap Wiki</a></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const dict = {
+        en: {
+          toggle: '日本語',
+          description: 'OSAKA Mapping Parties for State of the Map Asia 2026 OSAKA',
+          og_description: 'OSAKA Mapping Parties for State of the Map Asia 2026 OSAKA',
+          menu_home: 'HOME',
+          menu_about: 'About SotM Asia',
+          menu_news: 'News',
+          menu_venue: 'Venue',
+          menu_schedule: 'Schedule',
+          menu_mapping: 'Mapping Parties',
+          menu_coc: 'Code of Conduct',
+          eyebrow: 'Mapping Parties',
+          title: 'OSAKA Mapping Parties',
+          lead: 'Walk the city, observe local details, and update OpenStreetMap together.',
+          intro_body: 'At State of the Map Asia 2026 OSAKA, we will not only discuss open map data. We will also host Mapping Parties, a traditional OpenStreetMap community field-mapping event where participants walk through the city and create maps themselves.',
+          what_title: 'What Is a Mapping Party?',
+          what_body_1: '<a href="https://wiki.openstreetmap.org/wiki/Mapping_parties" target="_blank" rel="noopener noreferrer">Mapping Parties</a> are participatory community events where people visit a place and update OpenStreetMap (OSM) data through fieldwork. Compared with <a href="https://wiki.openstreetmap.org/wiki/Mapathon" target="_blank" rel="noopener noreferrer">Mapathons</a>, which are held online without visiting the site, mapping parties tend to collect fresher, more local information. Mapping may sound technical or difficult, but no specialist knowledge is required. Even first-time OSM users and people who have never edited a map can join and enjoy the experience.',
+          what_body_2: 'One of the biggest strengths of this event is that it welcomes beginners and new participants. Experienced mappers and specialists will also be there, but people who are just starting to explore OSM are equally important participants. Because you can learn how to use the tools and how to collect data from the ground up, the event also works as a hands-on training opportunity for getting to know OSM.',
+          what_body_3: 'At a mapping party, participants typically form teams and walk around the city together to collect information. They may use paper maps such as <a href="https://fieldpapers.org/" target="_blank" rel="noopener noreferrer">Field Papers</a> to note what they notice, or record streetscapes, buildings, landmarks, and other details with smartphones or digital cameras. Instead of working only at a desk, participants observe the character of the neighborhood while walking, rediscovering local charm with the feeling of a stroll or a treasure hunt.',
+          what_body_4: 'Since OpenStreetMap was born in 2004, <a href="https://osmcal.org/" target="_blank" rel="noopener noreferrer">many different mapping parties have been held around the world</a>.',
+          more_title: 'Read More',
+          more_body: 'If you would like to learn more, please also read these resources.',
+          resource_osm_label: 'What is OpenStreetMap?',
+          resource_party_label: 'What is a mapping party?'
+        },
+        ja: {
+          toggle: 'English',
+          description: 'State of the Map Asia 2026 OSAKA のマッピングパーティ案内',
+          og_description: 'State of the Map Asia 2026 OSAKA のマッピングパーティ案内',
+          menu_home: 'HOME',
+          menu_about: 'SotM Asia について',
+          menu_news: 'ニュース',
+          menu_venue: '会場',
+          menu_schedule: 'スケジュール',
+          menu_mapping: 'マッピングパーティ',
+          menu_coc: '行動規範',
+          eyebrow: 'マッピングパーティ',
+          title: 'OSAKA Mapping Parties',
+          lead: '街を歩き、地域の情報を観察し、OpenStreetMap を一緒に更新します。',
+          intro_body: 'State of the Map Asia 2026 OSAKAでは、オープンな地図データについて話し合うだけでなく、参加者が実際に街を歩き、自分たちで地図を作る、OpenStreetMap コミュニティの伝統的まち歩き地図更新イベント「マッピングパーティ」を開催します。',
+          what_title: 'マッピングパーティとは',
+          what_body_1: '<a href="https://wiki.openstreetmap.org/wiki/Mapping_parties" target="_blank" rel="noopener noreferrer">マッピングパーティ(Mapping Parties)</a>とは、現地に行き、フィールドワークを通してOpenStreetMap(OSM)のデータを更新していく参加型のコミュニティイベントです。現地に行かず、オンラインで開催される <a href="https://wiki.openstreetmap.org/wiki/Mapathon" target="_blank" rel="noopener noreferrer">マッパソン(Mappathon)</a> と比べて、鮮度の高い情報を集められる傾向があります。地図作りと聞くと専門的で難しそうに感じるかもしれませんが、専門知識は必要ありません。OSMを初めて使う方や、地図編集をしたことがない方でも、楽しみながら参加できるイベントです。',
+          what_body_2: 'このイベントの大きな魅力は、初心者や新しく参加する人を歓迎している点です。会場には地図作りの経験があるマッパーや専門家も参加しますが、マッピングパーティでは、これからOSMに触れる人たちも大切な参加者です。ツールの使い方やデータの集め方を一から学ぶことができるため、OSMを知るためのトレーニングイベントとしても位置づけられます。',
+          what_body_3: 'また、マッピングパーティでは、参加者同士でチームを組み、実際に街を歩きながら情報を集めるスタイルが一般的です。<a href="https://fieldpapers.org/" target="_blank" rel="noopener noreferrer">Field Papers</a> など紙の地図で気づいたことをメモしたり、スマートフォンやデジタルカメラで街の風景、建物、ランドマークなどを記録したりします。机の上だけで作業するのではなく、街を歩きながら地域の特徴を観察するため、散歩や宝探しのような感覚で地域の魅力を再発見できます。',
+          what_body_4: '2004年の OpenStreetMap 誕生後、<a href="https://osmcal.org/" target="_blank" rel="noopener noreferrer">世界各地で様々なマッピングパーティが開催</a>されてきました。',
+          more_title: 'もっと詳しく知りたい方へ',
+          more_body: 'もっと詳しく知りたい方はこちらもぜひお読みください！',
+          resource_osm_label: 'OpenStreetMapとは？',
+          resource_party_label: 'マッピングパーティとは？'
+        }
+      };
+      const menuToggle = document.getElementById('menu-toggle');
+      const siteMenu = document.getElementById('site-menu');
+      const langToggle = document.getElementById('lang-toggle');
+      const metaDescription = document.querySelector('meta[name="description"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      function applyLang(lang) {
+        const t = dict[lang] || dict.en;
+        document.documentElement.lang = lang;
+        langToggle.textContent = t.toggle;
+        if (metaDescription) metaDescription.setAttribute('content', t.description);
+        if (ogDescription) ogDescription.setAttribute('content', t.og_description);
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          const key = el.getAttribute('data-i18n');
+          if (t[key]) el.textContent = t[key];
+        });
+        document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+          const key = el.getAttribute('data-i18n-html');
+          if (t[key]) el.innerHTML = t[key];
+        });
+        localStorage.setItem('preferredLanguage', lang);
+      }
+      let currentLang = localStorage.getItem('preferredLanguage') === 'ja' ? 'ja' : 'en';
+      applyLang(currentLang);
+      langToggle.addEventListener('click', function () {
+        currentLang = currentLang === 'en' ? 'ja' : 'en';
+        applyLang(currentLang);
+      });
+      menuToggle.addEventListener('click', function () {
+        const open = siteMenu.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        siteMenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+      });
+    })();
+  </script>
+</body>
+</html>
