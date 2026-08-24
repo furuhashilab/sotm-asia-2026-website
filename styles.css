@@ -628,6 +628,17 @@ h3 {
   color: #ffffff;
 }
 
+.venue-info-list {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0 0 1.1rem;
+  padding-left: 1.25rem;
+}
+
+.venue-info-list li + li {
+  margin-top: 0.35rem;
+}
+
 .venue-map-panel {
   display: grid;
   gap: 0.85rem;
