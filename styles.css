@@ -215,6 +215,36 @@ h1 {
   color: #3b3b3b;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+.registration-cta {
+  align-items: center;
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-weight: 900;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  min-width: 190px;
+  padding: 0.78rem 1.45rem;
+  text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.registration-cta:hover {
+  background: #9b5a20;
+  border-color: #9b5a20;
+  color: #ffffff;
+}
+
 .news-alert {
   display: flex;
   align-items: center;
@@ -394,6 +424,11 @@ h1 {
   .hero-logo {
     justify-self: start;
     max-width: 180px;
+  }
+
+  .registration-cta {
+    min-width: 0;
+    width: 100%;
   }
 
   .map-head-row {
