@@ -678,6 +678,32 @@ h3 {
   margin-top: 0.32rem;
 }
 
+.course-details-link {
+  align-items: center;
+  border: 1px solid rgba(229, 131, 44, 0.4);
+  border-radius: 999px;
+  color: var(--accent);
+  display: inline-flex;
+  font-weight: 900;
+  gap: 0.42rem;
+  margin-top: 0.9rem;
+  padding: 0.5rem 0.78rem;
+  text-decoration: none !important;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.course-details-link svg {
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+}
+
+.course-details-link:hover {
+  background: var(--accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
 .ja-only {
   display: none;
 }
