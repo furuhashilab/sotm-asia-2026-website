@@ -245,6 +245,17 @@ h1 {
   color: #ffffff;
 }
 
+.registration-cta-secondary {
+  background: #ffffff;
+  color: var(--accent);
+}
+
+.registration-cta-secondary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
 .news-alert {
   display: flex;
   align-items: stretch;
