@@ -245,6 +245,17 @@ h1 {
   color: #ffffff;
 }
 
+.registration-cta-secondary {
+  background: #ffffff;
+  color: var(--accent);
+}
+
+.registration-cta-secondary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
 .news-alert {
   display: flex;
   align-items: stretch;
@@ -563,6 +574,164 @@ h3 {
   margin-top: 0.75rem;
 }
 
+.mapping-hero {
+  background:
+    linear-gradient(135deg, rgba(229, 131, 44, 0.09), rgba(255, 255, 255, 0) 54%),
+    #ffffff;
+}
+
+.mapping-copy-panel {
+  padding: 1.3rem;
+}
+
+.mapping-image-panel {
+  padding: 0.8rem;
+  overflow: hidden;
+}
+
+.mapping-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #d0d0d0;
+  border-radius: 14px;
+}
+
+.mapping-event-panel {
+  padding: 1.3rem;
+}
+
+.mapping-event-copy h2 {
+  color: var(--accent);
+  font-size: clamp(1.6rem, 3.2vw, 2.8rem);
+  line-height: 1.05;
+  margin: 0.3rem 0 0.5rem;
+}
+
+.mapping-event-copy h3 {
+  margin-top: 1rem;
+}
+
+.mapping-event-copy p {
+  color: var(--muted);
+  line-height: 1.76;
+}
+
+.mapping-event-copy a {
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.course-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.15rem 0;
+}
+
+.course-card {
+  border: 1px solid rgba(229, 131, 44, 0.28);
+  border-radius: 16px;
+  background: #fffaf5;
+  padding: 1rem;
+}
+
+.course-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #d0d0d0;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.course-label {
+  color: var(--accent) !important;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.45rem !important;
+}
+
+.course-card h3 {
+  margin: 0 0 0.65rem;
+}
+
+.course-card ul {
+  color: var(--muted);
+  line-height: 1.62;
+  margin: 0.8rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.course-card li + li {
+  margin-top: 0.32rem;
+}
+
+.ja-only {
+  display: none;
+}
+
+html[lang="ja"] .ja-only {
+  display: block;
+}
+
+html[lang="ja"] .en-only {
+  display: none;
+}
+
+.mapping-copy {
+  max-width: 900px;
+}
+
+.mapping-copy h2 {
+  color: var(--accent);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  margin: 1.4rem 0 0.65rem;
+}
+
+.mapping-copy h2:first-child {
+  margin-top: 0;
+}
+
+.mapping-copy p {
+  color: var(--muted);
+  line-height: 1.78;
+  margin: 0 0 1rem;
+}
+
+.mapping-copy a {
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.mapping-resources {
+  border: 1px solid rgba(229, 131, 44, 0.28);
+  border-radius: 16px;
+  background: #fff7ef;
+  margin-top: 1.35rem;
+  padding: 1rem;
+}
+
+.mapping-resources h2 {
+  margin-top: 0;
+}
+
+.resource-list {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.resource-list li + li {
+  margin-top: 0.45rem;
+}
+
 .venue-showcase {
   display: grid;
   gap: 1.1rem;
@@ -589,7 +758,7 @@ h3 {
 .venue-card-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .venue-card {
@@ -914,6 +1083,10 @@ h3 {
   }
 
   .venue-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-grid {
     grid-template-columns: 1fr;
   }
 

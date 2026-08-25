@@ -28,6 +28,7 @@
     <a href="news.html" data-i18n="menu_news">News</a>
     <a href="venue.html" class="active" data-i18n="menu_venue">Venue</a>
     <a href="schedule.html" data-i18n="menu_schedule">Schedule</a>
+    <a href="mappingparties.html" data-i18n="menu_mapping">Mapping Parties</a>
     <a href="coc.html" data-i18n="menu_coc">Code of Conduct</a>
   </nav>
 
@@ -64,6 +65,17 @@
             <div class="venue-nav-links" aria-label="Navigation links for AManTo Cafe">
               <a href="https://omaps.app/_3gIz5fMDs/AManToCafe" target="_blank" rel="noopener noreferrer" data-i18n="nav_organic">Organic Maps</a>
               <a href="https://maps.app.goo.gl/cKefJTbc8ofqSVL8A" target="_blank" rel="noopener noreferrer" data-i18n="nav_google">Google Maps</a>
+            </div>
+          </div>
+        </article>
+        <article class="venue-card">
+          <img src="assets/AManTo2.png" alt="Illustration of AManTo 2" loading="lazy" />
+          <div>
+            <h3 data-i18n="venue_amanto2_title">AManTo 2</h3>
+            <p data-i18n="venue_amanto2_body">A nearby AManTo community venue that expands the gathering space around Nakazakichō.</p>
+            <div class="venue-nav-links" aria-label="Navigation links for AManTo 2">
+              <a href="https://omaps.app/_3gIz5f0z3/AManTo2" target="_blank" rel="noopener noreferrer" data-i18n="nav_organic">Organic Maps</a>
+              <a href="https://maps.app.goo.gl/QeABTk16Zh33UM5U8" target="_blank" rel="noopener noreferrer" data-i18n="nav_google">Google Maps</a>
             </div>
           </div>
         </article>
@@ -114,6 +126,7 @@
           menu_news: 'News',
           menu_venue: 'Venue',
           menu_schedule: 'Schedule',
+          menu_mapping: 'Mapping Parties',
           menu_coc: 'Code of Conduct',
           eyebrow: 'Venue',
           title: 'Nakazakichō Hall & Salon de AManTo 天人',
@@ -124,6 +137,8 @@
           venue_hall_body: 'A community-rooted multi-purpose hall that will serve as the main venue for sessions and gatherings.',
           venue_amanto_title: 'Salon de AManTo 天人',
           venue_amanto_body: 'A beloved local cultural cafe and community space that helps shape the unique atmosphere of Nakazakichō.',
+          venue_amanto2_title: 'AManTo 2',
+          venue_amanto2_body: 'A nearby AManTo community venue that expands the gathering space around Nakazakichō.',
           venue_map_title: 'Road to the Venue',
           nav_organic: 'Organic Maps',
           nav_google: 'Google Maps',
@@ -132,6 +147,7 @@
           poi_osaka: 'Osaka Station',
           poi_hall: 'Nakazakichō Hall',
           poi_amanto: 'AManTo Cafe',
+          poi_amanto2: 'AManTo 2',
           a1: 'Access Guide',
           a2: 'Accessibility Information',
           a3: 'Nearby Accommodation',
@@ -151,6 +167,7 @@
           menu_news: 'ニュース',
           menu_venue: '会場',
           menu_schedule: 'スケジュール',
+          menu_mapping: 'マッピングパーティ',
           menu_coc: '行動規範',
           eyebrow: '会場',
           title: '中崎町ホール & Salon de AManTo 天人',
@@ -161,6 +178,8 @@
           venue_hall_body: 'セッションや交流の中心会場となる、地域に根ざした多目的ホールです。',
           venue_amanto_title: 'Salon de AManTo 天人',
           venue_amanto_body: '中崎町らしい空気をつくる、地域に親しまれている文化カフェ・コミュニティスペースです。',
+          venue_amanto2_title: 'AManTo 2',
+          venue_amanto2_body: '中崎町周辺の交流スペースを広げる、AManTo の近隣コミュニティ会場です。',
           venue_map_title: '会場への道',
           nav_organic: 'Organic Mapsで開く',
           nav_google: 'Google Mapsで開く',
@@ -169,6 +188,7 @@
           poi_osaka: '大阪駅',
           poi_hall: '中崎町ホール',
           poi_amanto: 'AManTo Cafe',
+          poi_amanto2: 'AManTo 2',
           a1: 'アクセス案内',
           a2: 'アクセシビリティ情報',
           a3: '周辺宿泊情報',
@@ -198,6 +218,13 @@
         {
           id: 'poi_amanto',
           center: [135.504393646796, 34.708068733628544],
+          zoom: 18.0,
+          pitch: 20,
+          bearing: 45
+        },
+        {
+          id: 'poi_amanto2',
+          center: [135.50514572763328, 34.708288335566635],
           zoom: 18.0,
           pitch: 20,
           bearing: 45
@@ -304,6 +331,7 @@
           let markerOptions = { color: '#4A4A4A' };
           if (poi.id === 'poi_hall') markerOptions = { color: '#e53935', scale: 1.5 };
           if (poi.id === 'poi_amanto') markerOptions = { color: '#E5832C', scale: 1.2 };
+          if (poi.id === 'poi_amanto2') markerOptions = { color: '#E5832C', scale: 1.2 };
           new maplibregl.Marker(markerOptions).setLngLat(poi.center).addTo(venueMap);
         });
 
