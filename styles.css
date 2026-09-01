@@ -1094,6 +1094,22 @@ html[lang="ja"] .en-only {
   margin-top: 0.2rem;
 }
 
+.session-list {
+  display: grid;
+  gap: 0.45rem;
+  line-height: 1.5;
+  margin-top: 0.7rem;
+}
+
+.session-item {
+  background: #fffaf4;
+  border: 1px solid #f2dcc6;
+  border-radius: 10px;
+  color: #3d3d3d;
+  margin: 0;
+  padding: 0.55rem 0.65rem;
+}
+
 .license-panel {
   display: flex;
   flex-direction: column;
